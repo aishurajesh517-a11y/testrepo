@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <style>
+            th,td{
+                font-size:40px;
+                padding:10px
+            }
+             #resultBox{
+                font-size:25px;
+                margin-top:20px;
+                background-color:lightyellow;
+                padding:15px;
+                width:350px;
+                border:3px solid black;
+             }
+        </style>
+    </head>
+    <h1>Sudent Details</h1>
+    <body>
+    <table border="20" bgcolor="pink" height="500px" width="1000px" >
+        <tr>
+            <th>Student name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td>Arjun</td>
+            <td>19</td>
+            <td>A</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Taara</td>
+            <td>19</td>
+            <td>C</td>
+            <td>Physics</td>
+        </tr>
+        <tr>
+            <td>Mathew</td>
+            <td>19</td>
+            <td>D</td>
+            <td>Chemistry</td>
+        </tr>
+        <tr>
+            <td>Yaazhini</td>
+            <td>19</td>
+            <td>A</td>
+            <td>English<c/td>
+        </tr>
+        </table>
+        <div id="resultBox"></div>
+        <script>
+            let table=document.getElementById("studentTable");
+            let totalStudents=0;
+            let totalPass=0;
+            let totalFail=0;
+
+            for(let i=1;i<table.rows.length;i++){
+                totalStudents++;
+
+                let grade=table.rows[i].cells[2].innerText;
+
+                if(grade=="A"||grade=="B"||grade=="C"){
+                    totalPass++;
+                }else{
+                    totalFail++;
+                }
+            }
+            document.getElementById("resultBox").innerHTML =
+            "Total students:"+totalStudents+"<br>"+
+            "Total Pass:"+totalPass + "<br>" + 
+            "Total Fail:" + totalFail;
+        </script>
+        </body>
+    </html>
