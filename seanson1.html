@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>input field </title>
+</head>
+<body>
+    <div class="box">
+        <input type="number" id="seasonInput" placeholder="Enter a number (1-4)">
+        <button onclick="showSeason()">Submit</button>
+    </div>
+    <div id="output"></div>
+
+    <script>
+        function showSeason() {
+            let input = document.getElementById("seasonInput").value;
+            let season = parseInt(input);
+            let result = "";
+
+            switch(season) {
+                case 1:
+                    result = "Summer";
+                    break;
+                case 2:
+                    result = "Winter";
+                    break;
+                case 3:
+                    result = "Spring";
+                    break;
+                case 4:
+                    result = "Rainy";
+                    break;
+                default:
+                    result = "Not found";
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
