@@ -1,0 +1,38 @@
+<html>
+  <style>
+    button{
+      background-color:red;
+      color:white;
+    }
+  </style>
+  <table border="2">
+    <th>NAME</th>
+    <th>AGE</th>
+    <th>COURSE</th>
+    <th>GENDER</th>
+    <th>EMAIL</th>
+    <th>ACTION</th>
+    <tr id="ais">
+    <td>Aishu</td>
+    <td>18</td>
+    <td>Python</td>
+    <td>Female</td>
+    <td>aishurajesh@gmail.com</td>
+    <td><button onclick="del(event)">Delete</button>
+    </td></tr>
+     <tr>
+    <td>Amala</td>
+    <td>15</td>
+    <td>Javascript</td>
+    <td>Female</td>
+    <td>amala@gmail.com</td>
+    <td><button onclick="del(event)">Delete</button>
+    </td></tr>
+  </table>
+</html>
+<script>
+  function del(event)
+  {
+    event.target.parentNode.parentNode.remove()
+  }
+</script>
