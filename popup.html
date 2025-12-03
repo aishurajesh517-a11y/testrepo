@@ -1,0 +1,44 @@
+<style>
+.overlay{
+background-color:black;
+width:100%;
+height:100%;
+position:absolute;
+top:0px;
+left:0px;
+opacity:0.8;
+z-index:1;
+display:none;
+}
+.popupbox{
+position:absolute;
+z-index:3;
+background-color:white;
+color:black;
+width:40%;
+padding:20px;
+border-radius:10px;
+left:30%;
+display:none;
+}
+</style>
+<button onclick="show()">Show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+<p>A paragraph is a series of sentences that are organized around and relate to a single, central idea, known as the topic. All sentences within that paragraph must support or develop this main point to ensure unity and coherence. For instance, a paragraph about the potential dangers of piranhas would only contain information about when they might bite, rather than unrelated facts about different fish.  </p>
+<button onclick="closepopup()">Close</button>
+</div>
+<script>
+var popupoverlay=document.querySelector(".overlay")
+var popupbox=document.querySelector(".popupbox")
+function show()
+{
+popupbox.style.display="block"
+popupoverlay.style.display="block"
+}
+function closepopup()
+{
+popupbox.style.display="none"
+popupoverlay.style.display="none"
+}
+</script>	
